@@ -6,19 +6,18 @@ import SignupTemplate from "../components/templates/SignupTemplate";
 import { ModalContext } from "../App";
 
 const HomePage = () => {
-    const { displayModal, closeModal } = useContext(ModalContext);
-    return (
-        <div className="container mt-20">
-            <Button
-                func={() => {
-                    displayModal("", <SignupTemplate />);
-                }}
-            >
-                Sign up
-            </Button>
-            {/* <SignupTemplate /> */}
-        </div>
-    );
+  const { displayModal } = useContext(ModalContext);
+  return (
+    <div className="container mt-20">
+      <Button
+        func={() => {
+          displayModal("", <SignupTemplate />);
+        }}
+      >
+        Sign up
+      </Button>
+    </div>
+  );
 };
 
 export default HomePage;
